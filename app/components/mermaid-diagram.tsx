@@ -14,7 +14,10 @@ export function MermaidDiagram({ chart }: { chart: string }) {
   useEffect(() => {
     // When the component mounts or the chart data changes,
     // tell Mermaid.js to find all elements with class="mermaid" and render them.
-    mermaid.run()
+    mermaid.run().catch((err) => {
+      // Log any rendering errors to the console instead of letting them crash the app.
+      console.error("Mermaid rendering failed:", err)
+    })
   }, [chart])
 
   // The raw chart syntax is placed inside a div with the "mermaid" class.

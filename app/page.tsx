@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Coins, Gift, HeartHandshake, Shield, Sprout } from "lucide-react"
+import { ArrowRight, Coins, Gift, HeartHandshake, Shield, ShieldCheck, Sprout } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -23,7 +23,7 @@ export default function LandingPage() {
           <div className="mt-10">
             <Button asChild size="lg">
               <Link href="/dashboard">
-                Explore the Dashboard <ArrowRight className="ml-2 h-5 w-5" />
+                Explore the technical demo <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
@@ -32,14 +32,14 @@ export default function LandingPage() {
 
       {/* Core Philosophy */}
       <section className="py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Guiding Principles</h2>
             <p className="mt-4 text-lg text-gray-600">
               From material civilization to a 'Neo-Jomon' fusion of spiritual and material well-being.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="inline-flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
                 <HeartHandshake className="h-6 w-6" />
@@ -65,33 +65,21 @@ export default function LandingPage() {
                 We use technology to create a local economy that serves human needs directly.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder's Message */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-          <div className="md:col-span-1">
-            <img src="/japanese-farmer-portrait.png" alt="Taihei Takisawa" className="rounded-lg shadow-lg w-full" />
-          </div>
-          <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Greetings from our Founder</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              "I’m Taihei Takisawa. The Great East Japan Earthquake was a turning point for me. I left Tokyo to create a
-              new, self-sufficient social model at the foot of the Yatsugatake Mountains."
-            </p>
-            <p className="mt-4 text-gray-600">
-              "Inspired by Israeli kibbutzim, we began with a simple idea: distribute 'food' instead of 'salary.' We
-              practice natural farming, producing over 10 tons of rice annually without pesticides. This rice is the
-              foundation of our community."
-            </p>
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold">Consensus & Digital Trust</h3>
+              <p className="mt-2 text-gray-600">
+                Decisions are made collectively, secured by transparent, digital trust.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Connecting Vision to Mechanisms */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -144,7 +132,7 @@ export default function LandingPage() {
       </section>
 
       {/* Ending Village Concept */}
-      <section className="bg-white py-16 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A Community for Life</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
@@ -164,7 +152,7 @@ export default function LandingPage() {
             <p className="text-gray-400">General Incorporated Association Kibbutz Yatsugatake</p>
             <div className="mt-4 flex justify-center space-x-6">
               <Link href="/dashboard" className="text-gray-400 hover:text-white">
-                Dashboard
+                Technical Demo
               </Link>
               <Link href="/" className="text-gray-400 hover:text-white">
                 Our Vision
